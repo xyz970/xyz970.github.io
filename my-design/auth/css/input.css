@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Poppins-bold;
+  font-weight: bold;
+  src: url('../fonts/Poppins/Poppins-Bold.otf');
+}
+@font-face {
+  font-family: Poppins-regular;
+  font-weight: normal;
+  src: url('../fonts/Poppins/Poppins-Regular.otf');
+}
+
+*{
+  font-family: 'Poppins-regular';
+}
+
+.fnt-poppins-bold{
+  font-family: 'Poppins-bold';
+}
+.fnt-poppins-regular{
+  font-family: 'Poppins-regular';
+}
+
+.section-base{
+  @apply h-screen dark:bg-gray-800;
+}
+
+.text-regular{
+  @apply fnt-poppins-regular;
+}
+
+.base-text{
+    @apply dark:text-white/90 text-gray-700;
+}
+
+.label-text{
+    @apply font-medium dark:text-white/90  text-slate-700;
+}
+
+.form-input{
+    @apply autofill:dark:bg-gray-700  px-3 py-2 bg-white dark:text-white dark:border-gray-800 dark:bg-gray-700 border shadow-sm  placeholder-slate-400 focus:outline-none focus:border-violet-600/90 focus:ring-violet-600/90 placeholder:text-slate-600 placeholder:dark:text-slate-500 rounded-md sm:text-sm focus:ring-1;
+}
+
+.checkbox{
+    @apply rounded-lg border border-gray-300  dark:bg-gray-700 dark:border-gray-600 accent-violet-700 focus:accent-violet-700;
+}
+
+.button{
+    @apply font-semibold bg-violet-700/90 hover:bg-violet-600/90 rounded-lg text-white;
+}
+
+.text-required{
+    @apply after:content-['*'] after:ml-0.5 after:text-red-500;
+}
+
+.other-links{
+    @apply underline text-xs text-slate-900 dark:text-white/90;
+}
+
+.card{
+    @apply flex border-2 rounded-xl dark:border-gray-800 dark:bg-gray-800 shadow-gray-600/25 shadow-lg dark:shadow-md;
+}
+
+.image-container{
+    @apply flex-none w-64 relative hidden lg:flex;
+}
+
+.image{
+    @apply absolute inset-0 w-full h-full object-cover rounded-lg;
+}
+
+.row{
+    @apply flex flex-row;
+}
+
+.col{
+    @apply flex flex-col;
+}
