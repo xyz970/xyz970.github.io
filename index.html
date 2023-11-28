@@ -1,1 +1,198 @@
-<p>Hello World<p/> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <link
+        href='https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i'
+        rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Muhammad Adi Saputro</title>
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <nav id="navbar">
+        <div class="navbar-wrapper">
+            <a href="" class="flex items-center">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white"> mhmmdadisptr</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" id="toogle" type="button" aria-controls="navbar-default"
+                aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <i id="icon" class="fa-solid fa-bars fa-2x"></i>
+            </button>
+            <div class="w-full md:block md:w-auto transition-all ease-out duration-500 hidden" id="navbar-default">
+                <ul id="navbar-list">
+                    <li class="py-1 md:py-0">
+                        <a id="nav-link-active" href="#home">
+                            Home
+                            <span></span>
+                        </a>
+                    </li>
+                    <li class="py-1 md:py-0">
+                        <a id="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
+                    <li class="py-1 md:py-0">
+                        <a id="nav-link" href="#mywork">
+                            My Work
+
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="h-[100%] relative" id="home">
+        <div class="flex flex-col mb-20">
+            <h1 class="text-4xl font-extrabold text-slate-500">I'm a</h1>
+            <h1 class="text-8xl font-extrabold">Software</h1>
+            <h1 class="text-8xl font-extrabold">Developer <span id="point">.</span></h1>
+        </div>
+        <div class="absolute left-[50%] -bottom-4 -translate-x-[50%] -translate-y-[50%]">
+            <div class="grid grid-flow-col grid-cols-3">
+                <p class="text-center text-3xl">+ </p>
+                <p class="text-center text-xl"> SCROLL TO CONTINUE </p>
+                <p class="text-center text-3xl"> + </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="h-[100vh] px-[20%]" id="about">
+        <h1 class="text-white text-5xl pt-[20%] font-bold ">About <span class="text-orange-600">Me</span></h1>
+        <div class="flex flex-row pt-16 justify-between -m-px">
+            <img src="assets/images/avatar-edited.png" alt="" srcset="" class="mix-blend-color-burn h-[15%] w-[40%]">
+            <div class="flex flex-col justify-between items-center">
+                <p class="text-white">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illum odio, tenetur quibusdam optio
+                    commodi similique labore repellat, dicta mollitia perferendis, perspiciatis ab eaque fugit rem quae
+                    laudantium ipsa molestiae.
+                    Eos officia in magni aut inventore? Reiciendis aut impedit fugit, enim quisquam vero aspernatur
+                    numquam asperiores dolore! Quidem ipsum recusandae, dicta fugit sit eos voluptates ducimus nam dolor
+                    accusamus! Veritatis.
+                    Voluptatem ex modi debitis amet voluptatibus fugit corporis quisquam exercitationem consequatur
+                    distinctio odio illum sapiente explicabo odit eaque rem, nemo dolorum!
+                </p>
+                <div class="h-14 w-25">
+                    <button onclick="window.location.href='assets/resume/CV.pdf'">
+                        Download CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-[10%]" id="mywork">
+        <h1 class="text-8xl font-extrabold text-white pt-[12%]">Featured Work</h1>
+        <div class="grid grid-cols-2 pt-[5%] gap-7">
+            <div class="py-6 px-4 border-gray-900 border rounded-lg group">
+                <div class="max-w-4xl mx-auto grid grid-cols-1 ">
+                    <div
+                        class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 group-hover:z-0 z-20 ">
+                        <h1 class="mt-1 text-lg font-semibold text-white dark:sm:text-white">Brothers 88 Cafe App
+                        </h1>
+                        <p class="text-sm leading-4 font-medium text-white  dark:sm:text-slate-400">Laravel, Mysql</p>
+                    </div>
+                    <div class="transition duration-500 ease-out grid gap-4 col-start-1 col-end-3 row-start-1 grayscale group-hover:grayscale-0 group-hover:scale-125">
+                        <img src="assets/images/screenshot/brothers.png" alt=""
+                            class="w-full h-60 object-cover rounded-lg group-hover:object-contain group-hover:z-20 z-0" loading="lazy">
+                    </div>
+                    <p
+                        class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 text-white">
+                        This sunny and spacious room is for those traveling light and looking for a comfy and cosy place
+                        to lay their head for a night or two. This beach house sits in a vibrant neighborhood littered
+                        with cafes, pubs, restaurants and supermarkets and is close to all the major attractions such as
+                        Edinburgh Castle and Arthur's Seat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-6 px-4 border-gray-900 border rounded-lg group">
+                <div class="max-w-4xl mx-auto grid grid-cols-1 ">
+                    <div
+                        class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 group-hover:z-0 z-20">
+                        <h1 class="mt-1 text-lg font-semibold text-white dark:sm:text-white">Jti Surat
+                        </h1>
+                        <p class="text-sm leading-4 font-medium text-white  dark:sm:text-slate-400">Flutter, Laravel, Mysql</p>
+                    </div>
+                    <div class="transition duration-500 ease-out grid gap-4 col-start-1 col-end-3 row-start-1 grayscale group-hover:grayscale-0 group-hover:scale-125">
+                        <img src="assets/images/screenshot/jti-surat.png" alt=""
+                            class="w-full h-60 object-cover rounded-lg group-hover:object-contain " loading="lazy">
+                    </div>
+                    <p
+                        class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 text-white">
+                        This sunny and spacious room is for those traveling light and looking for a comfy and cosy place
+                        to lay their head for a night or two. This beach house sits in a vibrant neighborhood littered
+                        with cafes, pubs, restaurants and supermarkets and is close to all the major attractions such as
+                        Edinburgh Castle and Arthur's Seat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-6 px-4 border-gray-900 border rounded-lg group">
+                <div class="max-w-4xl mx-auto grid grid-cols-1 ">
+                    <div
+                        class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 group-hover:z-0 z-20">
+                        <h1 class="mt-1 text-lg font-semibold text-white dark:sm:text-white">Jti Anjungan
+                        </h1>
+                        <p class="text-sm leading-4 font-medium text-white  dark:sm:text-slate-400">Laravel, Mysql</p>
+                    </div>
+                    <div class="transition duration-500 ease-out grid gap-4 col-start-1 col-end-3 row-start-1 grayscale group-hover:grayscale-0 group-hover:scale-125">
+                        <img src="assets/images/screenshot/jti-anjungan.png" alt=""
+                            class="w-full h-60 object-cover rounded-lg group-hover:object-contain " loading="lazy">
+                    </div>
+                    <p
+                        class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 text-white">
+                        This sunny and spacious room is for those traveling light and looking for a comfy and cosy place
+                        to lay their head for a night or two. This beach house sits in a vibrant neighborhood littered
+                        with cafes, pubs, restaurants and supermarkets and is close to all the major attractions such as
+                        Edinburgh Castle and Arthur's Seat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-6 px-4 border-gray-900 border rounded-lg group">
+                <div class="max-w-4xl mx-auto grid grid-cols-1 ">
+                    <div
+                        class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 group-hover:z-0 z-20">
+                        <h1 class="mt-1 text-lg font-semibold text-white dark:sm:text-white">NB-Carwash App
+                        </h1>
+                        <p class="text-sm leading-4 font-medium text-white  dark:sm:text-slate-400">Laravel, Flutter, Mysql</p>
+                    </div>
+                    <div class="transition duration-500 ease-out grid gap-4 col-start-1 col-end-3 row-start-1 grayscale group-hover:grayscale-0 group-hover:scale-125">
+                        <img src="assets/images/screenshot/nb-carwash.png" alt=""
+                            class="w-full h-60 object-cover rounded-lg group-hover:object-contain " loading="lazy">
+                    </div>
+                    <p
+                        class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 text-white">
+                        This sunny and spacious room is for those traveling light and looking for a comfy and cosy place
+                        to lay their head for a night or two. This beach house sits in a vibrant neighborhood littered
+                        with cafes, pubs, restaurants and supermarkets and is close to all the major attractions such as
+                        Edinburgh Castle and Arthur's Seat.
+                    </p>
+                </div>
+            </div>
+            
+    </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+    integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script src="assets/js/main.js"></script>
+
+</html>
+
+</html>
