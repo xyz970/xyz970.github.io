@@ -13,7 +13,25 @@ toogle.click(function (e) {
 $(document).ready(function () {
   $("#x-animate").removeClass("translate-y-[150%]");
   $("#x-animate").addClass("translate-y-0");
-
+  if ($(window).width() < 1200) {
+    //   alert("Less than 960");
+    if ($("#responsive-dialog").length < 1) {
+      $("#navbar").after(
+        `
+    <div class=" fixed z-[99] w-screen h-screen bg-black m-auto flex justify-center flex-col " id="responsive-dialog">
+        <div class="">
+            <h1 class="glitch text-center text-8xl font-extrabold font-[Pixelify_Sans] text-white" data-text="Ooppss, Didn't Find Anything?">Ooppss, Didn't Find Anything?</h1>
+          </div>
+          <div class="pt-3.5">
+            <h2 class="text-center text-3xl font-[Pixelify_Sans] text-white">Please use desktop version to continue</h2>
+          </div>
+    </div>`
+      );
+    }
+  } else {
+    //   alert("More than 960");
+    $("#responsive-dialog").remove();
+  }
   // setTimeout(() => {
   //     $('#svg-x').addClass('animate-none');
   // }, 4000);
