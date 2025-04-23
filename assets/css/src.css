@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 
 /* body{
@@ -55,7 +53,7 @@ body {
    @apply w-full md:block md:w-auto transition-all ease-out duration-500 hidden
 } */
 #navbar-list {
-    @apply transform duration-300 ease-out sm:transition-none font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8  md:mt-0 md:border-0 md:bg-black md:border-white md:dark:bg-opacity-0
+    @apply transform duration-300 ease-out sm:transition-none font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8  md:mt-0 md:border-0 md:bg-black md:border-white md:dark:bg-transparent
 }
 
 .navbar-wrapper {
@@ -158,3 +156,85 @@ button {
     transition-property: width, left;
   }
 
+  .glitch {
+    position: relative;
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .glitch::before {
+    color: #ff00c8;
+    z-index: -1;
+    animation: glitchTop 1s infinite linear alternate-reverse;
+  }
+
+  .glitch::after {
+    color: #00fff9;
+    z-index: -2;
+    animation: glitchBottom 1s infinite linear alternate-reverse;
+  }
+
+  @keyframes glitchTop {
+    0% {
+      clip-path: inset(0 0 80% 0);
+      transform: translate(-2px, -2px);
+    }
+    20% {
+      clip-path: inset(0 0 60% 0);
+      transform: translate(2px, 1px);
+    }
+    40% {
+      clip-path: inset(0 0 70% 0);
+      transform: translate(-1px, 2px);
+    }
+    60% {
+      clip-path: inset(0 0 50% 0);
+      transform: translate(1px, -1px);
+    }
+    80% {
+      clip-path: inset(0 0 90% 0);
+      transform: translate(-2px, 1px);
+    }
+    100% {
+      clip-path: inset(0 0 80% 0);
+      transform: translate(0);
+    }
+  }
+
+  @keyframes glitchBottom {
+    0% {
+      clip-path: inset(80% 0 0 0);
+      transform: translate(2px, 2px);
+    }
+    20% {
+      clip-path: inset(60% 0 0 0);
+      transform: translate(-2px, 1px);
+    }
+    40% {
+      clip-path: inset(70% 0 0 0);
+      transform: translate(1px, -1px);
+    }
+    60% {
+      clip-path: inset(50% 0 0 0);
+      transform: translate(-1px, 2px);
+    }
+    80% {
+      clip-path: inset(90% 0 0 0);
+      transform: translate(2px, -2px);
+    }
+    100% {
+      clip-path: inset(80% 0 0 0);
+      transform: translate(0);
+    }
+  }

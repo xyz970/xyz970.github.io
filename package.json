@@ -1,5 +1,23 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.3.5"
+  "name": "xyz970.github.io",
+  "version": "1.0.0",
+  "description": "Github Page @xyz970",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyz970/xyz970.github.io.git"
+  },
+  "author": "xyz970",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xyz970/xyz970.github.io/issues"
+  },
+  "homepage": "https://github.com/xyz970/xyz970.github.io#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "tailwindcss": "^4.1.4"
   }
 }
