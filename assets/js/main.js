@@ -11,14 +11,25 @@ toogle.click(function (e) {
 });
 
 $(document).ready(function () {
+  const sr = ScrollReveal({
+    origin: "top",
+    distance: "30px",
+    duration: 2000,
+    reset: true,
+  });
+
   $("#x-animate").removeClass("translate-y-[150%]");
   $("#x-animate").addClass("translate-y-0");
   if ($(window).width() < 1200) {
     //   alert("Less than 960");
     if ($("#responsive-dialog").length < 1) {
+      $("#home").addClass("hidden");
+      $("#about").addClass("hidden");
+      $("#mywork").addClass("hidden");
+      $("#navbar").addClass("hidden");
       $("#navbar").after(
         `
-    <div class=" fixed z-[99] w-screen h-screen bg-black m-auto flex justify-center flex-col " id="responsive-dialog">
+    <div class=" fixed z-[99] w-screen h-screen bg-black m-auto flex justify-center flex-col overflow-x-hidden overflow-y-hidden" id="responsive-dialog">
         <div class="">
             <h1 class="glitch text-center text-8xl font-extrabold font-[Pixelify_Sans] text-white" data-text="Ooppss, Didn't Find Anything?">Ooppss, Didn't Find Anything?</h1>
           </div>
@@ -31,31 +42,61 @@ $(document).ready(function () {
   } else {
     //   alert("More than 960");
     $("#responsive-dialog").remove();
+    $("#home").removeClass("hidden");
+    $("#home").append(
+      `
+        <div class="flex flex-col mb-20">
+            <h1 class="text-4xl font-extrabold text-slate-500">I'm a</h1>
+            <h1 class="text-8xl font-extrabold">Software</h1>
+            <h1 class="text-8xl font-extrabold">Developer <span id="point">.</span></h1>
+        </div>`
+    );
+    $("#about").removeClass("hidden");
+    $("#mywork").removeClass("hidden");
+    $("#navbar").removeClass("hidden");
+    sr.reveal(`#home, #about`, {
+      interval: 400,
+    });
   }
-  // setTimeout(() => {
-  //     $('#svg-x').addClass('animate-none');
-  // }, 4000);
 });
 
 $(window).resize(function () {
   if ($(window).width() < 1200) {
     //   alert("Less than 960");
     if ($("#responsive-dialog").length < 1) {
+      $("#home").addClass("hidden");
+      $("#about").addClass("hidden");
+      $("#mywork").addClass("hidden");
+      $("#navbar").addClass("hidden");
       $("#navbar").after(
         `
-    <div class=" fixed z-[99] w-screen h-screen bg-black m-auto flex justify-center flex-col " id="responsive-dialog">
-        <div class="">
-            <h1 class="glitch text-center text-8xl font-extrabold font-[Pixelify_Sans] text-white" data-text="Ooppss, Didn't Find Anything?">Ooppss, Didn't Find Anything?</h1>
-          </div>
-          <div class="pt-3.5">
-            <h2 class="text-center text-3xl font-[Pixelify_Sans] text-white">Please use desktop version to continue</h2>
-          </div>
-    </div>`
+        <div class=" fixed z-[99] w-screen h-screen bg-black m-auto flex justify-center flex-col overflow-x-hidden overflow-y-hidden" id="responsive-dialog">
+            <div class="">
+                <h1 class="glitch text-center text-8xl font-extrabold font-[Pixelify_Sans] text-white" data-text="Ooppss, Didn't Find Anything?">Ooppss, Didn't Find Anything?</h1>
+              </div>
+              <div class="pt-3.5">
+                <h2 class="text-center text-3xl font-[Pixelify_Sans] text-white">Please use desktop version to continue</h2>
+              </div>
+        </div>`
       );
     }
   } else {
     //   alert("More than 960");
     $("#responsive-dialog").remove();
+    $("#home").removeClass("hidden");
+    if ($("#title").length < 1) {
+      $("#home").append(
+        `
+            <div class="flex flex-col mb-20" id="title">
+                <h1 class="text-4xl font-extrabold text-slate-500">I'm a</h1>
+                <h1 class="text-8xl font-extrabold">Software</h1>
+                <h1 class="text-8xl font-extrabold">Developer <span id="point">.</span></h1>
+            </div>`
+      );
+    }
+    $("#about").removeClass("hidden");
+    $("#mywork").removeClass("hidden");
+    $("#navbar").removeClass("hidden");
   }
 });
 
@@ -116,15 +157,4 @@ $("card").mouseout(function () {
     width: "120px",
     height: "120px",
   });
-});
-
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "30px",
-  duration: 2000,
-  reset: true,
-});
-
-sr.reveal(`#home, #about`, {
-  interval: 400,
 });

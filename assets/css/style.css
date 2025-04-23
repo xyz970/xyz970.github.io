@@ -238,6 +238,9 @@
   .relative {
     position: relative;
   }
+  .sticky {
+    position: sticky;
+  }
   .-top-1 {
     top: calc(var(--spacing) * -1);
   }
@@ -598,6 +601,12 @@
   .w-\[50rem\] {
     width: 50rem;
   }
+  .w-\[100\%\] {
+    width: 100%;
+  }
+  .w-auto {
+    width: auto;
+  }
   .w-full {
     width: 100%;
   }
@@ -710,6 +719,15 @@
   }
   .self-center {
     align-self: center;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  .overflow-y-hidden {
+    overflow-y: hidden;
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
