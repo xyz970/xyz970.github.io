@@ -38,7 +38,7 @@ body {
 
 #navbar {
     overflow: hidden;
-    @apply w-full h-[9rem] bg-black md:px-12 transition-all ease-out duration-500 px-[8%] py-9 fixed z-10 
+    @apply w-full h-[9rem] bg-black md:px-12 transition-all ease-out duration-500 px-[8%] py-9 fixed z-[9999] 
 }
 
 #toogle {
@@ -62,6 +62,17 @@ body {
 
 .fa-solid .fa-bars .fa-2xl {
     @apply text-4xl
+}
+
+#canvas{
+  position: fixed; /* Or absolute, depending on your needs */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block; /* Remove extra space below canvas */
+  z-index: -1; /* Pushes it behind other elements */
+  pointer-events: none; /* Allows clicks to pass through to elements below */
 }
 
 /* a:hover{

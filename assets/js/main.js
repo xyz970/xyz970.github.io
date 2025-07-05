@@ -10,6 +10,7 @@ toogle.click(function (e) {
   // console.log( $("#navbar-default").is(":hidden"));
 });
 
+
 $(document).ready(function () {
   const sr = ScrollReveal({
     origin: "top",
@@ -43,9 +44,10 @@ $(document).ready(function () {
     //   alert("More than 960");
     $("#responsive-dialog").remove();
     $("#home").removeClass("hidden");
+    $("#title").remove();
     $("#home").append(
       `
-        <div class="flex flex-col mb-20">
+        <div class="flex flex-col mb-20" id="title">
             <h1 class="text-4xl font-extrabold text-slate-500">I'm a</h1>
             <h1 class="text-8xl font-extrabold">Software</h1>
             <h1 class="text-8xl font-extrabold">Developer <span id="point">.</span></h1>
@@ -145,6 +147,18 @@ $("button").mouseout(function () {
     height: "120px",
   });
 });
+$("#canvas").mouseover(function () {
+  cursor.css({
+    width: "-10px",
+    height: "-10px",
+  });
+});
+$("#canvas").mouseout(function () {
+  cursor.css({
+    width: "120px",
+    height: "120px",
+  });
+});
 
 $("card").mouseover(function () {
   cursor.css({
@@ -153,6 +167,19 @@ $("card").mouseover(function () {
   });
 });
 $("card").mouseout(function () {
+  cursor.css({
+    width: "120px",
+    height: "120px",
+  });
+});
+
+$("#console").mouseover(function () {
+  cursor.css({
+    width: "0px",
+    height: "0px",
+  });
+});
+$("#console").mouseout(function () {
   cursor.css({
     width: "120px",
     height: "120px",
